@@ -14,5 +14,9 @@ struct Coach: Identifiable {
     var age: Int?
     var skills: String
     var profilePicture: Image
-    
+    var description: String
+    var localization: String
+    var visioCoaching: Bool
+    var irlCoaching: Bool
+    var fares: Int
 }
