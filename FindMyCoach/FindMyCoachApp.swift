@@ -11,7 +11,7 @@ import SwiftUI
 struct FindMyCoachApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Map()
         }
     }
 }
