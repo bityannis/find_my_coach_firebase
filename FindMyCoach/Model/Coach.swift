@@ -13,10 +13,11 @@ struct Coach: Identifiable {
     var lastName: String
     var age: Int?
     var skills: String
-    var profilePicture: Image
+    var profilePicture: String
     var description: String
     var localization: String
     var visioCoaching: Bool
     var irlCoaching: Bool
     var fares: Int
+    var rating: Double
 }
