@@ -18,12 +18,13 @@
 		0E51640329CAEF490042D2CA /* CoachProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51640229CAEF490042D2CA /* CoachProfile.swift */; };
 		0E51640529CAF3670042D2CA /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51640429CAF3670042D2CA /* ChatView.swift */; };
 		0E51640729CAFDBF0042D2CA /* PaymentModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51640629CAFDBF0042D2CA /* PaymentModal.swift */; };
-		0E51640B29CB1DF70042D2CA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51640A29CB1DF70042D2CA /* HomeView.swift */; };
 		0E51640D29CB2CCD0042D2CA /* EndSessionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51640C29CB2CCD0042D2CA /* EndSessionModal.swift */; };
 		0E51640F29CB36700042D2CA /* VisioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51640E29CB36700042D2CA /* VisioView.swift */; };
 		0E51641229CB46590042D2CA /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51641129CB46590042D2CA /* Program.swift */; };
 		0E51641429CB46AD0042D2CA /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51641329CB46AD0042D2CA /* ProgramView.swift */; };
 		0E51641629CB47B30042D2CA /* ProgramDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51641529CB47B30042D2CA /* ProgramDetail.swift */; };
+		0E51641829CB53FF0042D2CA /* TabViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51641729CB53FF0042D2CA /* TabViewDemo.swift */; };
+		0E51641A29CB54A00042D2CA /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51641929CB54A00042D2CA /* MessagesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,12 +40,13 @@
 		0E51640229CAEF490042D2CA /* CoachProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachProfile.swift; sourceTree = "<group>"; };
 		0E51640429CAF3670042D2CA /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		0E51640629CAFDBF0042D2CA /* PaymentModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModal.swift; sourceTree = "<group>"; };
-		0E51640A29CB1DF70042D2CA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0E51640C29CB2CCD0042D2CA /* EndSessionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndSessionModal.swift; sourceTree = "<group>"; };
 		0E51640E29CB36700042D2CA /* VisioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisioView.swift; sourceTree = "<group>"; };
 		0E51641129CB46590042D2CA /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 		0E51641329CB46AD0042D2CA /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
 		0E51641529CB47B30042D2CA /* ProgramDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramDetail.swift; sourceTree = "<group>"; };
+		0E51641729CB53FF0042D2CA /* TabViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewDemo.swift; sourceTree = "<group>"; };
+		0E51641929CB54A00042D2CA /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,12 +83,13 @@
 				0E5163F729CA03EC0042D2CA /* LocationView.swift */,
 				0E51640029CAEF1C0042D2CA /* ListOfCoaches.swift */,
 				0E51640429CAF3670042D2CA /* ChatView.swift */,
+				0E51641929CB54A00042D2CA /* MessagesView.swift */,
 				0E51641329CB46AD0042D2CA /* ProgramView.swift */,
+				0E51641729CB53FF0042D2CA /* TabViewDemo.swift */,
 				0E51641529CB47B30042D2CA /* ProgramDetail.swift */,
 				0E51641029CB43AA0042D2CA /* Modals */,
 				0E51640229CAEF490042D2CA /* CoachProfile.swift */,
 				0E51640E29CB36700042D2CA /* VisioView.swift */,
-				0E51640A29CB1DF70042D2CA /* HomeView.swift */,
 				0E5163F629CA03D90042D2CA /* Helpers */,
 				0E5163E529C9E81B0042D2CA /* Assets.xcassets */,
 				0E5163E729C9E81B0042D2CA /* Preview Content */,
@@ -200,16 +203,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E51641A29CB54A00042D2CA /* MessagesView.swift in Sources */,
 				0E51640F29CB36700042D2CA /* VisioView.swift in Sources */,
 				0E51641629CB47B30042D2CA /* ProgramDetail.swift in Sources */,
 				0E51641429CB46AD0042D2CA /* ProgramView.swift in Sources */,
 				0E51640D29CB2CCD0042D2CA /* EndSessionModal.swift in Sources */,
 				0E5163F329C9EB390042D2CA /* Coach.swift in Sources */,
+				0E51641829CB53FF0042D2CA /* TabViewDemo.swift in Sources */,
 				0E5163E429C9E8190042D2CA /* Map.swift in Sources */,
 				0E5163F829CA03EC0042D2CA /* LocationView.swift in Sources */,
 				0E5163E229C9E8190042D2CA /* FindMyCoachApp.swift in Sources */,
 				0E51640529CAF3670042D2CA /* ChatView.swift in Sources */,
-				0E51640B29CB1DF70042D2CA /* HomeView.swift in Sources */,
 				0E5163F029C9EA8C0042D2CA /* User.swift in Sources */,
 				0E51640329CAEF490042D2CA /* CoachProfile.swift in Sources */,
 				0E51641229CB46590042D2CA /* Program.swift in Sources */,
