@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct FindMyCoachApp: App {
+    var healthVM = HealthKitViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            Map()
+//            HealthView().environmentObject(healthVM)
+            Login()
         }
     }
 }

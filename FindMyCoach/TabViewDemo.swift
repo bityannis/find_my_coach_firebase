@@ -10,9 +10,13 @@ import SwiftUI
 struct TabViewDemo: View {
     var body: some View {
         TabView {
+            HomeView().tabItem {
+                Image(systemName: "person.fill")
+                Text("Sommaire")
+            }
             LocationView().tabItem {
                 Image(systemName: "mappin")
-                Text("Map")
+                Text("Carte")
             }
             MessagesView().tabItem {
                 Image(systemName: "message.fill")
@@ -20,7 +24,7 @@ struct TabViewDemo: View {
             }
             ProgramView().tabItem {
                 Image(systemName: "dumbbell.fill")
-                Text("Program")
+                Text("Programme")
             }
         }
     }

@@ -5,6 +5,7 @@
 //  Created by Yannis Kessas on 21/03/2023.
 //
 
+
 import SwiftUI
 
 struct Coach: Identifiable {
@@ -19,5 +20,17 @@ struct Coach: Identifiable {
     var visioCoaching: Bool
     var irlCoaching: Bool
     var fares: Int
-    var rating: Double
+    var coachRating: Double?
+    var userReviews = [String: String]()
+    var userRatings = [String: Double]()
+    func average()-> Double{
+        let allRatings = userRatings.values
+        var averageRating: Double = 0
+        for userRating in allRatings {
+            averageRating += userRating
+        }
+        averageRating = averageRating/(Double(allRatings.count))
+        return averageRating
+    }
+    
 }

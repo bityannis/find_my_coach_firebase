@@ -10,20 +10,29 @@ import SwiftUI
 struct ProgramDetail: View {
     var program: Program = Program(day: "Monday", description: "Pecs", emoji: "🏋️", fullDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ")
     var body: some View {
-        VStack {
-            Text(program.day)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            Spacer()
-            Text(program.description)
-                .font(.title)
-            Text(program.emoji)
-                .font(.largeTitle)
-            Spacer()
-            Text(program.fullDescription)
-            Spacer()
+        NavigationStack {
+            VStack {
+                Text(program.day)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                Spacer()
+                Text(program.description)
+                    .font(.title)
+                Text(program.emoji)
+                    .font(.largeTitle)
+                Spacer()
+                Text(program.fullDescription)
+                Spacer()
+            }
+            .padding()
+            .foregroundColor(.black)
+            NavigationLink {
+                VisioView()
+            } label: {
+                Text("Start Program")
+            }
+
         }
-        .padding()
     }
 }
 

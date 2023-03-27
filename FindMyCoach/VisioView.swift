@@ -14,18 +14,18 @@ struct VisioView: View {
     
     var body: some View {
         ZStack {
-            Color(.black)
+            Color(.orange)
             VStack {
-                HStack {
-                    Text("Share Play").frame(width: 300, height: 80).background(.gray).cornerRadius(10)
-                    Image("GigachadImage").resizable().frame(width: 50, height: 50).cornerRadius(50).offset(x: -300, y: 1)
-                    VStack {
-                        ForEach(0..<images.count) {
-                            Image(systemName: images[$0]).foregroundColor(.white)
-                        }
-                    }
-                }
-                .offset(x: 1, y: -100)
+//                HStack {
+//                    Text("Share Play").frame(width: 300, height: 80).background(.gray).cornerRadius(10)
+//                    Image("GigachadImage").resizable().frame(width: 50, height: 50).cornerRadius(50).offset(x: -300, y: 1)
+//                    VStack {
+//                        ForEach(0..<images.count) {
+//                            Image(systemName: images[$0]).foregroundColor(.white)
+//                        }
+//                    }
+//                }
+//                .offset(x: 1, y: -100)
                 
                 ZStack {
                     Circle().trim(from: 0, to: timerValue*0.1*2).stroke(lineWidth: 10).foregroundColor(.gray)
