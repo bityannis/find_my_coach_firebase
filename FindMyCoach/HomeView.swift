@@ -11,123 +11,91 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-//                Color(.orange)
-                VStack(alignment: .leading){
-                    Text(Date.now, format: .dateTime.day().month().year());
-                    Text("Sommaire")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
+                LinearGradient(gradient: Gradient(colors: [.white, .yellow, .orange]), startPoint: .top, endPoint: .bottom)
+                
+                VStack(alignment: .trailing){
+                    VStack {
+                        Text(Date.now, format: .dateTime.day().month().year()).padding(10)
+//                        Text("Sommaire")
+//                            .font(.largeTitle)
+//                            .fontWeight(.bold)
+//                            .padding(5)
+                    }.padding(.top, 50.0)
+                   
                     
                     //VStack de l'affichage global
-                    VStack(alignment: .leading){
+                    VStack(alignment: .leading) {
                         
                         //Mise en page de l'actualité
-                        Text("Actualité")
+                        Text("Actualité").font(.largeTitle)
+                            .fontWeight(.bold)
                             .padding(5)
                         NavigationLink {
                             ActualityView()
                         } label : {
                             ZStack {
-                                Rectangle()
-                                    .foregroundColor(.gray)
-                                    .frame(width: 360, height: 150)
-                                    .cornerRadius(20)
-                                
-                                VStack {
-                                    HStack{
-                                        //Mettre "Logo" des amis via une struct
-                                        Image(systemName: "person.circle.fill")
-                                            .resizable()
-                                            .frame(width: 40, height: 40)
+                                ZStack {
+                                    Color(.white)
+                                    VStack {
+                                        FriendFeed(sentence: "Dimitri a réussis son premier marathon", symbol: "dumbbell")
+                                        FriendFeed(sentence: "Abdallah a battu son record de pompes", symbol: "person.fill")
                                         
-                                        
-                                        VStack{
-                                            //Mettre les phrases via la struct
-                                            Text("Votre Ami a débloquer le badge course 10 Kilomètre")
-                                        }
                                     }
-                                    HStack{
-                                        //Mettre "Logo" des amis via une struct
-                                        Image(systemName: "person.circle.fill")
-                                            .resizable()
-                                            .frame(width: 40, height: 40)
-                                        
-                                        
-                                        VStack{
-                                            //Mettre les phrases via la struct
-                                            Text("Votre Ami a débloquer le badge course 10 Kilomètre")
-                                        }
-                                    }
-                                }
+                                }.cornerRadius(10)
                             }.foregroundColor(.black)
                         }
-                        //Fin d'actu
-                        //Mise en page des Badges et Planning
                         
                         Text("Badges")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
                         
                         HStack {
                             ZStack {
                                 NavigationLink {
                                     BadgesView()
                                 } label: {
-    //                                Rectangle()
-    //                                    .foregroundColor(.gray)
-    //                                    .frame(width: 230, height: 90)
-    //                                    .cornerRadius(20)
-                                    
-                                    HStack{
-                                        //Récupéré les defis réussi pour remplacer les cercles
-                                        Circle()
-                                            .frame(height: 60)
-                                        Circle()
-                                            .frame(height: 60)
-                                        Circle()
-                                            .frame(height: 60)
-                                    }
+                                    ZStack {
+                                        Color(.white)
+                                        HStack{
+                                            //Récupéré les defis réussi pour remplacer les cercles
+                                            Badge(color: .green, symbol: "dumbbell.fill")
+                                            Badge(color: .green, symbol: "figure.disc.sports")
+                                            Badge(color: .orange, symbol: "carrot")
+                                            Badge(color: .blue, symbol: "figure.open.water.swim")
+                                        }
+                                    }.cornerRadius(10)
                                 }
-                           
+                                
                             }.foregroundColor(.black)
                             Spacer()
-//                            ZStack{
-//                                NavigationLink {
-//                                    ProgramView()
-//                                } label: {
-//
-//                                    Image(systemName: "calendar")
-//                                        .resizable()
-//                                        .frame(width: 60, height: 60)
+                        }
+//                        Spacer()
+//                        Text("Conseils")      .font(.largeTitle)
+//                            .fontWeight(.bold)
+//                        ZStack{
+//                            ZStack {
+//                                Color(.white)
+//                                VStack(alignment: .center){
+//                                    Text("Pour réussir votre objectif Hebdomadaire nous vous conseillons")
+//                                        .padding()
 //                                }
-//
-//                            }.foregroundColor(.black)
-                        }//Fin de mise en page
-                        //Mise en page Conseils
+//                            }.cornerRadius(10)
+//                        }
                         Spacer()
-                        Text("Conseils")
-                        ZStack{
-                            Rectangle()
-                                .foregroundColor(.gray)
-                                .frame(width: 360, height: 110)
-                                .cornerRadius(20)
-                            
-                            VStack(alignment: .center){
-                                Text("Pour réussir votre objectif Hebdomadaire nous vous conseillons")
-                                    .padding()
-                            }
-                        }//Fin mise en pages
-                        Spacer()
-                        //Mise en page de progression
-                        Text("Progression")
+                        Text("Progression")      .font(.largeTitle)
+                            .fontWeight(.bold)
                         ZStack{
                             NavigationLink {
                                 ProgressionView()
                             } label: {
-                                HStack {
-    //                                Circle()
-    //                                    .frame(height: 70)
-                                    Image(systemName: "star.fill").resizable().frame(width: 50, height: 50)
-                                    Text("Vous êtes a 67% de votre objectif")
-                                }
+                                ZStack {
+                                    Color(.white)
+                                    HStack {
+                                        Image(systemName: "star.fill").resizable().frame(width: 50, height: 50).foregroundColor(.yellow)
+                                        
+                                        Text("Vous êtes a 67% de votre objectif")
+                                    }
+                                }.cornerRadius(10)
                             }
                         }.foregroundColor(.black)
                     }
@@ -135,8 +103,11 @@ struct HomeView: View {
                     Spacer()
                 }
             }
-            ///
+            //
+            .ignoresSafeArea()
+            
         }
+        
         
     }
     
@@ -149,3 +120,28 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 
+
+struct Badge: View {
+    var color: Color
+    var symbol: String
+    
+    var body: some View {
+        Circle().foregroundColor(color).frame(width: 60, height: 60).overlay(Image(systemName: symbol))
+    }
+}
+
+struct FriendFeed: View {
+    var sentence: String
+    var symbol: String
+    
+    var body: some View {
+        HStack{
+            Image(systemName: symbol)
+                .resizable()
+                .frame(width: 30, height: 30)
+            VStack{
+                Text(sentence)
+            }
+        }
+    }
+}

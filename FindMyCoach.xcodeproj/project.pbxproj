@@ -24,7 +24,6 @@
 		0E51641429CB46AD0042D2CA /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51641329CB46AD0042D2CA /* ProgramView.swift */; };
 		0E51641629CB47B30042D2CA /* ProgramDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51641529CB47B30042D2CA /* ProgramDetail.swift */; };
 		0E51641829CB53FF0042D2CA /* TabViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51641729CB53FF0042D2CA /* TabViewDemo.swift */; };
-		0E51641A29CB54A00042D2CA /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E51641929CB54A00042D2CA /* MessagesView.swift */; };
 		0E5FF32429CC98B5003A52CD /* HealthKitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FF32329CC98B5003A52CD /* HealthKitViewModel.swift */; };
 		0E5FF32629CC98D6003A52CD /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FF32529CC98D6003A52CD /* HealthKitManager.swift */; };
 		0E5FF32829CC9902003A52CD /* HealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FF32729CC9902003A52CD /* HealthView.swift */; };
@@ -44,6 +43,9 @@
 		0EB8E6EF29D1973900C7B82A /* ArticlesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8E6EE29D1973900C7B82A /* ArticlesList.swift */; };
 		0EB8E6F129D1974C00C7B82A /* ArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8E6F029D1974C00C7B82A /* ArticleDetail.swift */; };
 		0EB8E6F329D1977100C7B82A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8E6F229D1977100C7B82A /* WebView.swift */; };
+		0EB8E6F529D1BA0700C7B82A /* DynamicGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8E6F429D1BA0700C7B82A /* DynamicGradient.swift */; };
+		0EB8E6F829D1BBE500C7B82A /* Kanit-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EB8E6F729D1BBA200C7B82A /* Kanit-ExtraBold.ttf */; };
+		0EB8E6FA29D1C0B700C7B82A /* NewMessagerie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8E6F929D1C0B700C7B82A /* NewMessagerie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +67,6 @@
 		0E51641329CB46AD0042D2CA /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
 		0E51641529CB47B30042D2CA /* ProgramDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramDetail.swift; sourceTree = "<group>"; };
 		0E51641729CB53FF0042D2CA /* TabViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewDemo.swift; sourceTree = "<group>"; };
-		0E51641929CB54A00042D2CA /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		0E5FF32329CC98B5003A52CD /* HealthKitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitViewModel.swift; sourceTree = "<group>"; };
 		0E5FF32529CC98D6003A52CD /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		0E5FF32729CC9902003A52CD /* HealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthView.swift; sourceTree = "<group>"; };
@@ -86,6 +87,10 @@
 		0EB8E6EE29D1973900C7B82A /* ArticlesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesList.swift; sourceTree = "<group>"; };
 		0EB8E6F029D1974C00C7B82A /* ArticleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetail.swift; sourceTree = "<group>"; };
 		0EB8E6F229D1977100C7B82A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		0EB8E6F429D1BA0700C7B82A /* DynamicGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicGradient.swift; sourceTree = "<group>"; };
+		0EB8E6F629D1BB9700C7B82A /* Kanit-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Kanit-ExtraBold.ttf"; path = "../../../../../../../Downloads/Kanit/Kanit-ExtraBold.ttf"; sourceTree = "<group>"; };
+		0EB8E6F729D1BBA200C7B82A /* Kanit-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanit-ExtraBold.ttf"; sourceTree = "<group>"; };
+		0EB8E6F929D1C0B700C7B82A /* NewMessagerie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessagerie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,16 +130,18 @@
 				0E5163F729CA03EC0042D2CA /* LocationView.swift */,
 				0E51640029CAEF1C0042D2CA /* ListOfCoaches.swift */,
 				0E51640429CAF3670042D2CA /* ChatView.swift */,
-				0E51641929CB54A00042D2CA /* MessagesView.swift */,
+				0EB8E6F929D1C0B700C7B82A /* NewMessagerie.swift */,
 				0E51641329CB46AD0042D2CA /* ProgramView.swift */,
 				0E51641729CB53FF0042D2CA /* TabViewDemo.swift */,
 				0E51641529CB47B30042D2CA /* ProgramDetail.swift */,
 				0E64C58D29CC8870004E3FED /* Login.swift */,
+				0EB8E6F429D1BA0700C7B82A /* DynamicGradient.swift */,
 				0E5FF32D29CD930D003A52CD /* FiveStarView.swift */,
 				0E5FF32F29CD94EB003A52CD /* ProgressionView.swift */,
 				0E5FF33329CD95A7003A52CD /* ObjectivesView.swift */,
 				0EB8E6E729D1879000C7B82A /* ActualityView.swift */,
 				0E5FF33729CD9633003A52CD /* BadgesView.swift */,
+				0EB8E6F729D1BBA200C7B82A /* Kanit-ExtraBold.ttf */,
 				0E5FF32229CC989C003A52CD /* Health */,
 				0E64C58F29CC90E6004E3FED /* ProfileView.swift */,
 				0E51641029CB43AA0042D2CA /* Modals */,
@@ -159,6 +166,7 @@
 		0E5163F129C9EB2B0042D2CA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0EB8E6F629D1BB9700C7B82A /* Kanit-ExtraBold.ttf */,
 				0E5163EF29C9EA8C0042D2CA /* User.swift */,
 				0E5163F229C9EB390042D2CA /* Coach.swift */,
 				0E51641129CB46590042D2CA /* Program.swift */,
@@ -266,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EB8E6F829D1BBE500C7B82A /* Kanit-ExtraBold.ttf in Resources */,
 				0E5163E929C9E81B0042D2CA /* Preview Assets.xcassets in Resources */,
 				0E5163E629C9E81B0042D2CA /* Assets.xcassets in Resources */,
 			);
@@ -279,7 +288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E5FF33629CD95F2003A52CD /* Objective.swift in Sources */,
-				0E51641A29CB54A00042D2CA /* MessagesView.swift in Sources */,
 				0E51640F29CB36700042D2CA /* VisioView.swift in Sources */,
 				0EB8E6E629D17B6A00C7B82A /* HomeView.swift in Sources */,
 				0E51641629CB47B30042D2CA /* ProgramDetail.swift in Sources */,
@@ -288,6 +296,7 @@
 				0E5FF32629CC98D6003A52CD /* HealthKitManager.swift in Sources */,
 				0E5FF33029CD94EB003A52CD /* ProgressionView.swift in Sources */,
 				0E5163F329C9EB390042D2CA /* Coach.swift in Sources */,
+				0EB8E6FA29D1C0B700C7B82A /* NewMessagerie.swift in Sources */,
 				0E51641829CB53FF0042D2CA /* TabViewDemo.swift in Sources */,
 				0EB8E6EA29D196D000C7B82A /* Post.swift in Sources */,
 				0E64C58C29CC85AE004E3FED /* MapLocation.swift in Sources */,
@@ -305,6 +314,7 @@
 				0EB8E6EF29D1973900C7B82A /* ArticlesList.swift in Sources */,
 				0E5FF32E29CD930D003A52CD /* FiveStarView.swift in Sources */,
 				0E5FF33229CD9509003A52CD /* Goal.swift in Sources */,
+				0EB8E6F529D1BA0700C7B82A /* DynamicGradient.swift in Sources */,
 				0E5FF32829CC9902003A52CD /* HealthView.swift in Sources */,
 				0E51641229CB46590042D2CA /* Program.swift in Sources */,
 				0E64C58E29CC8870004E3FED /* Login.swift in Sources */,

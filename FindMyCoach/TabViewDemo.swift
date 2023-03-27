@@ -18,7 +18,7 @@ struct TabViewDemo: View {
                 Image(systemName: "mappin")
                 Text("Carte")
             }
-            MessagesView().tabItem {
+            NewMessagerie().tabItem {
                 Image(systemName: "message.fill")
                 Text("Messages")
             }

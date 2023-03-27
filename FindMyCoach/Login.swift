@@ -28,36 +28,39 @@ struct Login: View {
 
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("FIND MY COACH").font(.largeTitle).fontWeight(.bold).foregroundColor(Color.orange)
-                Spacer()
-                Text(sentence[i])
-                    .font(.title)
-                    .fontWeight(.bold)
-                
-                HStack {
-                    Text("Username")
-                    TextField("Type here", text: $username)
+            ZStack {
+                DynamicGradient()
+                VStack {
+                    Text("FIND MY COACH").font(Font.custom("Kanit-ExtraBold", size: 50.0)).fontWeight(.bold).foregroundColor(Color.white).multilineTextAlignment(.center).padding(50)
+                    Spacer()
+                    Text(sentence[i])
+                        .font(.title)
+                        .fontWeight(.semibold).foregroundColor(Color.black)
+                    
+                    HStack {
+                        Text("Username")
+                        TextField("Type here", text: $username)
+                    }
+                    HStack {
+                        Text("Password")
+                        SecureField("Type here", text: $password)
+                    }
+                    
+                    Button(action: {
+                        validateCredentials()
+                    }) {
+                        Text("Login").frame(width: 150, height: 50).background(.black).cornerRadius(10).foregroundColor(.white).fontWeight(.bold)
+                    }
+                    
+                    NavigationLink(
+                        destination: TabViewDemo(),
+                        isActive: $connectedViewIsActive
+                    ) {
+                        EmptyView()
+                    }
+                    Spacer()
                 }
-                HStack {
-                    Text("Password")
-                    SecureField("Type here", text: $password)
-                }
-                
-                Button(action: {
-                    validateCredentials()
-                }) {
-                    Text("Login").frame(width: 150, height: 50).background(.orange).cornerRadius(10).foregroundColor(.white).fontWeight(.bold)
-                }
-                
-                NavigationLink(
-                    destination: TabViewDemo(),
-                    isActive: $connectedViewIsActive
-                ) {
-                    EmptyView()
-                }
-                Spacer()
-            }
+            }.ignoresSafeArea()
         }
     }
 }

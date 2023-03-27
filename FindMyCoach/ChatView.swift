@@ -15,10 +15,10 @@ struct ChatView: View {
     
     var body: some View {
         ZStack {
-            Color(.black)
+//            Color(.black)
             
             VStack(alignment: .leading) {
-                Text("Coach Chad").font(.title).fontWeight(.bold).foregroundColor(.white).multilineTextAlignment(.center).offset(x: 1, y: -220)
+                Text("Coach Chad").font(.title).fontWeight(.bold).foregroundColor(.black).multilineTextAlignment(.center).offset(x: 1, y: -220)
                 
                 HStack(spacing: 12.0) {
                     Spacer()
@@ -39,7 +39,7 @@ struct ChatView: View {
                     Text(chadMessage)
                         .padding(10)
                         .foregroundColor(.black)
-                        .background(.white)
+                        .background(.yellow)
                     .cornerRadius(10)
                     
                 }
