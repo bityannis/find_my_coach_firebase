@@ -34,12 +34,16 @@
 		0E5FF33429CD95A7003A52CD /* ObjectivesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FF33329CD95A7003A52CD /* ObjectivesView.swift */; };
 		0E5FF33629CD95F2003A52CD /* Objective.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FF33529CD95F2003A52CD /* Objective.swift */; };
 		0E5FF33829CD9633003A52CD /* BadgesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FF33729CD9633003A52CD /* BadgesView.swift */; };
-		0E5FF33A29CD9750003A52CD /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5FF33929CD9750003A52CD /* SummaryView.swift */; };
 		0E64C58C29CC85AE004E3FED /* MapLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64C58B29CC85AE004E3FED /* MapLocation.swift */; };
 		0E64C58E29CC8870004E3FED /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64C58D29CC8870004E3FED /* Login.swift */; };
 		0E64C59029CC90E6004E3FED /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E64C58F29CC90E6004E3FED /* ProfileView.swift */; };
 		0EB8E6E629D17B6A00C7B82A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8E6E529D17B6A00C7B82A /* HomeView.swift */; };
 		0EB8E6E829D1879000C7B82A /* ActualityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8E6E729D1879000C7B82A /* ActualityView.swift */; };
+		0EB8E6EA29D196D000C7B82A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8E6E929D196D000C7B82A /* Post.swift */; };
+		0EB8E6EC29D196F800C7B82A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8E6EB29D196F800C7B82A /* NetworkManager.swift */; };
+		0EB8E6EF29D1973900C7B82A /* ArticlesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8E6EE29D1973900C7B82A /* ArticlesList.swift */; };
+		0EB8E6F129D1974C00C7B82A /* ArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8E6F029D1974C00C7B82A /* ArticleDetail.swift */; };
+		0EB8E6F329D1977100C7B82A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8E6F229D1977100C7B82A /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,13 +75,17 @@
 		0E5FF33329CD95A7003A52CD /* ObjectivesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectivesView.swift; sourceTree = "<group>"; };
 		0E5FF33529CD95F2003A52CD /* Objective.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objective.swift; sourceTree = "<group>"; };
 		0E5FF33729CD9633003A52CD /* BadgesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesView.swift; sourceTree = "<group>"; };
-		0E5FF33929CD9750003A52CD /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		0E64C58B29CC85AE004E3FED /* MapLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocation.swift; sourceTree = "<group>"; };
 		0E64C58D29CC8870004E3FED /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		0E64C58F29CC90E6004E3FED /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0E64C59129CC9193004E3FED /* FindMyCoach.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FindMyCoach.entitlements; sourceTree = "<group>"; };
 		0EB8E6E529D17B6A00C7B82A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0EB8E6E729D1879000C7B82A /* ActualityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualityView.swift; sourceTree = "<group>"; };
+		0EB8E6E929D196D000C7B82A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		0EB8E6EB29D196F800C7B82A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0EB8E6EE29D1973900C7B82A /* ArticlesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesList.swift; sourceTree = "<group>"; };
+		0EB8E6F029D1974C00C7B82A /* ArticleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetail.swift; sourceTree = "<group>"; };
+		0EB8E6F229D1977100C7B82A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,7 @@
 		0E5163E029C9E8190042D2CA /* FindMyCoach */ = {
 			isa = PBXGroup;
 			children = (
+				0EB8E6ED29D1970F00C7B82A /* API */,
 				0E64C59129CC9193004E3FED /* FindMyCoach.entitlements */,
 				0E5163E129C9E8190042D2CA /* FindMyCoachApp.swift */,
 				0EB8E6E529D17B6A00C7B82A /* HomeView.swift */,
@@ -124,6 +133,7 @@
 				0E5FF32D29CD930D003A52CD /* FiveStarView.swift */,
 				0E5FF32F29CD94EB003A52CD /* ProgressionView.swift */,
 				0E5FF33329CD95A7003A52CD /* ObjectivesView.swift */,
+				0EB8E6E729D1879000C7B82A /* ActualityView.swift */,
 				0E5FF33729CD9633003A52CD /* BadgesView.swift */,
 				0E5FF32229CC989C003A52CD /* Health */,
 				0E64C58F29CC90E6004E3FED /* ProfileView.swift */,
@@ -134,8 +144,6 @@
 				0E5163E529C9E81B0042D2CA /* Assets.xcassets */,
 				0E5163E729C9E81B0042D2CA /* Preview Content */,
 				0E5163F129C9EB2B0042D2CA /* Model */,
-				0E5FF33929CD9750003A52CD /* SummaryView.swift */,
-				0EB8E6E729D1879000C7B82A /* ActualityView.swift */,
 			);
 			path = FindMyCoach;
 			sourceTree = "<group>";
@@ -157,6 +165,8 @@
 				0E64C58B29CC85AE004E3FED /* MapLocation.swift */,
 				0E5FF33129CD9509003A52CD /* Goal.swift */,
 				0E5FF33529CD95F2003A52CD /* Objective.swift */,
+				0EB8E6E929D196D000C7B82A /* Post.swift */,
+				0EB8E6EB29D196F800C7B82A /* NetworkManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,6 +196,16 @@
 				0E5FF32529CC98D6003A52CD /* HealthKitManager.swift */,
 			);
 			path = Health;
+			sourceTree = "<group>";
+		};
+		0EB8E6ED29D1970F00C7B82A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0EB8E6EE29D1973900C7B82A /* ArticlesList.swift */,
+				0EB8E6F029D1974C00C7B82A /* ArticleDetail.swift */,
+				0EB8E6F229D1977100C7B82A /* WebView.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,17 +289,20 @@
 				0E5FF33029CD94EB003A52CD /* ProgressionView.swift in Sources */,
 				0E5163F329C9EB390042D2CA /* Coach.swift in Sources */,
 				0E51641829CB53FF0042D2CA /* TabViewDemo.swift in Sources */,
+				0EB8E6EA29D196D000C7B82A /* Post.swift in Sources */,
 				0E64C58C29CC85AE004E3FED /* MapLocation.swift in Sources */,
-				0E5FF33A29CD9750003A52CD /* SummaryView.swift in Sources */,
 				0E5163E429C9E8190042D2CA /* Map.swift in Sources */,
+				0EB8E6EC29D196F800C7B82A /* NetworkManager.swift in Sources */,
 				0E5163F829CA03EC0042D2CA /* LocationView.swift in Sources */,
 				0E5163E229C9E8190042D2CA /* FindMyCoachApp.swift in Sources */,
+				0EB8E6F129D1974C00C7B82A /* ArticleDetail.swift in Sources */,
 				0E51640529CAF3670042D2CA /* ChatView.swift in Sources */,
 				0E5163F029C9EA8C0042D2CA /* User.swift in Sources */,
 				0E5FF32429CC98B5003A52CD /* HealthKitViewModel.swift in Sources */,
 				0E5FF33429CD95A7003A52CD /* ObjectivesView.swift in Sources */,
 				0E51640329CAEF490042D2CA /* CoachProfile.swift in Sources */,
 				0EB8E6E829D1879000C7B82A /* ActualityView.swift in Sources */,
+				0EB8E6EF29D1973900C7B82A /* ArticlesList.swift in Sources */,
 				0E5FF32E29CD930D003A52CD /* FiveStarView.swift in Sources */,
 				0E5FF33229CD9509003A52CD /* Goal.swift in Sources */,
 				0E5FF32829CC9902003A52CD /* HealthView.swift in Sources */,
@@ -287,6 +310,7 @@
 				0E64C58E29CC8870004E3FED /* Login.swift in Sources */,
 				0E5FF33829CD9633003A52CD /* BadgesView.swift in Sources */,
 				0E64C59029CC90E6004E3FED /* ProfileView.swift in Sources */,
+				0EB8E6F329D1977100C7B82A /* WebView.swift in Sources */,
 				0E51640129CAEF1C0042D2CA /* ListOfCoaches.swift in Sources */,
 				0E51640729CAFDBF0042D2CA /* PaymentModal.swift in Sources */,
 			);

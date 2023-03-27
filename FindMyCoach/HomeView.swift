@@ -11,7 +11,7 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(.orange)
+//                Color(.orange)
                 VStack(alignment: .leading){
                     Text(Date.now, format: .dateTime.day().month().year());
                     Text("Sommaire")
@@ -89,21 +89,17 @@ struct HomeView: View {
                            
                             }.foregroundColor(.black)
                             Spacer()
-                            ZStack{
-                                NavigationLink {
-                                    ProgramView()
-                                } label: {
-    //                                Rectangle()
-    //                                    .foregroundColor(.gray)
-    //                                    .frame(width: 100, height: 90)
-    //                                    .cornerRadius(20)
-                                    
-                                    Image(systemName: "calendar")
-                                        .resizable()
-                                        .frame(width: 60, height: 60)
-                                }
-                              
-                            }.foregroundColor(.black)
+//                            ZStack{
+//                                NavigationLink {
+//                                    ProgramView()
+//                                } label: {
+//
+//                                    Image(systemName: "calendar")
+//                                        .resizable()
+//                                        .frame(width: 60, height: 60)
+//                                }
+//
+//                            }.foregroundColor(.black)
                         }//Fin de mise en page
                         //Mise en page Conseils
                         Spacer()
