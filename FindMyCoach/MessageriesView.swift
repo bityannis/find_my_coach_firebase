@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct NewMessagerie: View {
-    init() {
-        //UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(.white)]
-    }
+//    init() {
+//        //UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(.white)]
+//    }
     var body: some View {
         NavigationStack{
             ZStack{

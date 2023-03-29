@@ -126,7 +126,7 @@ struct HomeView: View {
                     }
                 }.padding()
             }.ignoresSafeArea()
-                .navigationBarHidden(true)
+//                .navigationBarHidden(true)
         }
     }
 }

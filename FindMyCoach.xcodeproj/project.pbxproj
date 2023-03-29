@@ -14,6 +14,7 @@
 		0E1FA8E829D46F290019932C /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1FA8E729D46F290019932C /* ChatView.swift */; };
 		0E1FA8EB29D470230019932C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1FA8EA29D470230019932C /* FirebaseAuth */; };
 		0E1FA8ED29D470230019932C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0E1FA8EC29D470230019932C /* FirebaseFirestore */; };
+		0E1FA8EF29D47A690019932C /* MessageriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1FA8EE29D47A690019932C /* MessageriesView.swift */; };
 		0E5163E229C9E8190042D2CA /* FindMyCoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5163E129C9E8190042D2CA /* FindMyCoachApp.swift */; };
 		0E5163E429C9E8190042D2CA /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5163E329C9E8190042D2CA /* Map.swift */; };
 		0E5163E629C9E81B0042D2CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5163E529C9E81B0042D2CA /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		0E1FA8E329D46EF20019932C /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		0E1FA8E529D46F130019932C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0E1FA8E729D46F290019932C /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		0E1FA8EE29D47A690019932C /* MessageriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageriesView.swift; sourceTree = "<group>"; };
 		0E5163DE29C9E8190042D2CA /* FindMyCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMyCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E5163E129C9E8190042D2CA /* FindMyCoachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMyCoachApp.swift; sourceTree = "<group>"; };
 		0E5163E329C9E8190042D2CA /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				0E1FA8DB29D46DBA0019932C /* Firebase */,
 				0EB8E6ED29D1970F00C7B82A /* API */,
 				0E5163E129C9E8190042D2CA /* FindMyCoachApp.swift */,
+				0E1FA8EE29D47A690019932C /* MessageriesView.swift */,
 				0EB8E6E529D17B6A00C7B82A /* HomeView.swift */,
 				0E5163F729CA03EC0042D2CA /* LocationView.swift */,
 				0E51640029CAEF1C0042D2CA /* ListOfCoaches.swift */,
@@ -362,6 +365,7 @@
 				0E5FF33829CD9633003A52CD /* BadgesView.swift in Sources */,
 				0E64C59029CC90E6004E3FED /* ProfileView.swift in Sources */,
 				0EB8E6F329D1977100C7B82A /* WebView.swift in Sources */,
+				0E1FA8EF29D47A690019932C /* MessageriesView.swift in Sources */,
 				0E51640129CAEF1C0042D2CA /* ListOfCoaches.swift in Sources */,
 				0E51640729CAFDBF0042D2CA /* PaymentModal.swift in Sources */,
 				0E1FA8E629D46F130019932C /* LoginView.swift in Sources */,
@@ -495,7 +499,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FindMyCoach/Preview Content\"";
-				DEVELOPMENT_TEAM = 2XU8ZJ37RY;
+				DEVELOPMENT_TEAM = 3686QWT3X6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FindMyCoach/Info.plist;
@@ -511,7 +515,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.FindMyCoach;
+				PRODUCT_BUNDLE_IDENTIFIER = comk.FindMyCoach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -528,7 +532,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FindMyCoach/Preview Content\"";
-				DEVELOPMENT_TEAM = 2XU8ZJ37RY;
+				DEVELOPMENT_TEAM = 3686QWT3X6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FindMyCoach/Info.plist;
@@ -544,7 +548,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.FindMyCoach;
+				PRODUCT_BUNDLE_IDENTIFIER = comk.FindMyCoach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

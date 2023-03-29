@@ -27,7 +27,7 @@ struct Login: View {
     }
 
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ZStack {
                 DynamicGradient()
                 VStack {

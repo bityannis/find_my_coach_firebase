@@ -37,6 +37,7 @@ struct TabViewDemo: View {
             
         }
         .accentColor(.orange)
+        .navigationBarHidden(true)
     }
 }
 
