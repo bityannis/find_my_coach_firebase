@@ -15,6 +15,12 @@ struct ChatView: View {
     @State var messages: [Message] = []
     @State var messageColor: Color = .white
     
+    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+    
+    init() {
+           getMessages()
+       }
+    
     func logOut() {
         do {
             try Auth.auth().signOut()
@@ -85,13 +91,13 @@ struct ChatView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                HStack {
-                    NavigationLink(destination: WelcomeView().navigationBarHidden(true), isActive: $isLoggedOut) {
-                        Button("Log Out") {
-                            logOut()
-                        }.fontWeight(.bold).foregroundColor(.purple)
-                    }
-                }.padding()
+//                HStack {
+//                    NavigationLink(destination: WelcomeView().navigationBarHidden(true), isActive: $isLoggedOut) {
+//                        Button("Log Out") {
+//                            logOut()
+//                        }.fontWeight(.bold).foregroundColor(.purple)
+//                    }
+//                }.padding()
                 
                 ForEach(messages) { message in
                     VStack {
@@ -102,6 +108,10 @@ struct ChatView: View {
                         }
                         
                     }
+//                    .onReceive(timer) { _ in
+//                       // Call your function here
+//                       getMessages()
+//                   }
                 }
                 Spacer()
                 

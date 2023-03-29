@@ -6,16 +6,36 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct HomeView: View {
+    @State var isLoggedOut: Bool = false
+    
+    func logOut() {
+        do {
+            try Auth.auth().signOut()
+            isLoggedOut = true
+            print("logged out successfully")
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
+    }
+    
     var body: some View {
         NavigationStack {
             ZStack {
                 Color(red: 30 / 255, green: 36 / 255, blue: 50 / 255)
 
                 VStack(alignment: .trailing){
-                    VStack {
+                    HStack {
                         Text(Date.now, format: .dateTime.day().month().year()).fontWeight(.bold).padding(10).foregroundColor(.white)
+                        HStack {
+                            NavigationLink(destination: WelcomeView().navigationBarHidden(true), isActive: $isLoggedOut) {
+                                Button("Log Out") {
+                                    logOut()
+                                }.fontWeight(.bold).foregroundColor(.purple)
+                            }
+                        }.padding()
 //                        Text("Sommaire")
 //                            .font(.largeTitle)
 //                            .fontWeight(.bold)

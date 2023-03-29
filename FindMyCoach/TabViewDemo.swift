@@ -25,7 +25,7 @@ struct TabViewDemo: View {
                 Text("Carte")
             }.toolbarBackground(Color.black, for: .tabBar)
             
-            ChatView().tabItem {
+            NewMessagerie().tabItem {
                 Image(systemName: "message.fill")
                 Text("Messages")
             }.toolbarBackground(Color.black, for: .tabBar)
