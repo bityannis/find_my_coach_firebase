@@ -26,20 +26,20 @@ struct EndSessionModal: View {
                 switch pourcentage{
                     
                 case 0...20:
+                    Text("⭐️")
                     
-                    Text(" ⭐️")
                 case 20...40:
-                    
                     Text("⭐️⭐️")
-                case 40...60:
                     
+                case 40...60:
                     Text("⭐️⭐️⭐️")
+                    
                 case 60...80:
                     Text("⭐️⭐️⭐️⭐️")
                     
                 case 80...100:
-                    
                     Text("⭐️⭐️⭐️⭐️⭐️")
+                    
                 default:
                     Color.black
                     
@@ -51,6 +51,8 @@ struct EndSessionModal: View {
                     
                     
                     Slider(value: $pourcentage, in: 0...100)
+                        .frame(width: 350,height: 100)
+
                     HStack (alignment: .top) {
                         Text("Donnez votre avis sur votre séance !")
                             .font(.title2)

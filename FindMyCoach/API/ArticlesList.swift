@@ -14,21 +14,34 @@ struct ArticlesList: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                List(networkManager.posts) { post in
-                    NavigationLink {
-                        ArticleDetail(url: post.url)
-                    } label: {
-                        HStack {
-//                            Text("\(String(post.points)) points")
-                            Text(post.title).fontWeight(.bold)
+            ZStack {
+                //                LinearGradient(gradient: Gradient(colors: [.white, .yellow, .orange]), startPoint: .top, endPoint: .bottom)
+                Color(red: 30 / 255, green: 36 / 255, blue: 50 / 255)
+                VStack {
+                    ForEach(networkManager.posts) { post in
+                        NavigationLink {
+                            ArticleDetail(url: post.url)
+                        } label: {
+                            ZStack {
+                                Rectangle()
+                                    .frame(width: 400, height: 100)
+                                    .foregroundColor(.black)
+                                    .cornerRadius(20)
+                                HStack {
+                                    //                            Text("\(String(post.points)) points")
+                                    Text(post.title)
+                                        .padding(.horizontal, 10)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.white)
+                                }
+                            }
                         }
                     }
+                    .navigationTitle("Sport & nutrition")
                 }
-                .navigationTitle("Sport News")
-            }
-            .onAppear {
-                self.networkManager.fetchData()
+                .onAppear {
+                    self.networkManager.fetchData()
+                }
             }
         }
     }

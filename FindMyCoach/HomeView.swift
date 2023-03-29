@@ -11,11 +11,11 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                LinearGradient(gradient: Gradient(colors: [.white, .yellow, .orange]), startPoint: .top, endPoint: .bottom)
-                
+                Color(red: 30 / 255, green: 36 / 255, blue: 50 / 255)
+
                 VStack(alignment: .trailing){
                     VStack {
-                        Text(Date.now, format: .dateTime.day().month().year()).padding(10)
+                        Text(Date.now, format: .dateTime.day().month().year()).fontWeight(.bold).padding(10).foregroundColor(.white)
 //                        Text("Sommaire")
 //                            .font(.largeTitle)
 //                            .fontWeight(.bold)
@@ -27,7 +27,7 @@ struct HomeView: View {
                     VStack(alignment: .leading) {
                         
                         //Mise en page de l'actualité
-                        Text("Actualité").font(.largeTitle)
+                        Text("Actualité").font(.largeTitle).foregroundColor(.white)
                             .fontWeight(.bold)
                             .padding(5)
                         NavigationLink {
@@ -35,27 +35,26 @@ struct HomeView: View {
                         } label : {
                             ZStack {
                                 ZStack {
-                                    Color(.white)
                                     VStack {
-                                        FriendFeed(sentence: "Dimitri a réussis son premier marathon", symbol: "dumbbell")
-                                        FriendFeed(sentence: "Abdallah a battu son record de pompes", symbol: "person.fill")
+                                        FriendFeed(sentence: "Dimitri a réussis son premier marathon", symbol: "figure.run")
+                                        FriendFeed(sentence: "Abdallah a battu son record de pompes", symbol: "figure.stand")
                                         
                                     }
-                                }.cornerRadius(10)
+                                }
                             }.foregroundColor(.black)
                         }
-                        
-                        Text("Badges")
+                        Spacer()
+                        Text("Badges").foregroundColor(.white)
                             .font(.largeTitle)
                             .fontWeight(.bold)
                         
                         HStack {
-                            ZStack {
+                            ZStack{
                                 NavigationLink {
                                     BadgesView()
                                 } label: {
-                                    ZStack {
-                                        Color(.white)
+                                    ZStack(alignment: .leading){
+                                        
                                         HStack{
                                             //Récupéré les defis réussi pour remplacer les cercles
                                             Badge(color: .green, symbol: "dumbbell.fill")
@@ -63,11 +62,10 @@ struct HomeView: View {
                                             Badge(color: .orange, symbol: "carrot")
                                             Badge(color: .blue, symbol: "figure.open.water.swim")
                                         }
-                                    }.cornerRadius(10)
+                                    }.cornerRadius(20)
                                 }
                                 
                             }.foregroundColor(.black)
-                            Spacer()
                         }
 //                        Spacer()
 //                        Text("Conseils")      .font(.largeTitle)
@@ -82,35 +80,35 @@ struct HomeView: View {
 //                            }.cornerRadius(10)
 //                        }
                         Spacer()
-                        Text("Progression")      .font(.largeTitle)
-                            .fontWeight(.bold)
+                        Text("Progression").font(.largeTitle)
+                            .fontWeight(.bold).foregroundColor(.white)
+                        
                         ZStack{
                             NavigationLink {
                                 ProgressionView()
                             } label: {
                                 ZStack {
-                                    Color(.white)
+                                    Rectangle()
+                                        .frame(width: 350, height: 100).cornerRadius(20)
                                     HStack {
-                                        Image(systemName: "star.fill").resizable().frame(width: 50, height: 50).foregroundColor(.yellow)
+                                        Image(systemName: "star.fill").resizable().frame(width: 50, height: 50).foregroundColor(.orange)
                                         
                                         Text("Vous êtes a 67% de votre objectif")
+                                            .font(.title2)
+                                            .fontWeight(.bold)
+                                            .foregroundColor(.white)
                                     }
-                                }.cornerRadius(10)
+                                }
                             }
                         }.foregroundColor(.black)
+                        Spacer()
+                        Spacer()
                     }
-                    .padding()
-                    Spacer()
-                }
-            }
-            //
-            .ignoresSafeArea()
-            
+                }.padding()
+            }.ignoresSafeArea()
+                .navigationBarHidden(true)
         }
-        
-        
     }
-    
 }
 
 struct HomeView_Previews: PreviewProvider {
@@ -126,7 +124,11 @@ struct Badge: View {
     var symbol: String
     
     var body: some View {
-        Circle().foregroundColor(color).frame(width: 60, height: 60).overlay(Image(systemName: symbol))
+        ZStack{
+            Rectangle()
+                .frame(width: 80, height: 100).cornerRadius(20)
+            Circle().foregroundColor(color).frame(width: 60, height: 60).overlay(Image(systemName: symbol))
+        }
     }
 }
 
@@ -135,13 +137,21 @@ struct FriendFeed: View {
     var symbol: String
     
     var body: some View {
-        HStack{
-            Image(systemName: symbol)
-                .resizable()
-                .frame(width: 30, height: 30)
-            VStack{
-                Text(sentence)
+        ZStack{
+            Rectangle()
+                .frame(width: 350, height: 40).cornerRadius(15)
+        
+            HStack{
+                Image(systemName: symbol)
+                    .foregroundColor(.orange)
+                
+                VStack{
+                    Text(sentence)
+                        .foregroundColor(.white)
+                    
+                }
             }
         }
     }
 }
+

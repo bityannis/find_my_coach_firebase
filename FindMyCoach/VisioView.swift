@@ -36,7 +36,7 @@ struct VisioView: View {
                   }
                 .padding()
                 
-                Button("Start Training") {
+                Button("Commencer l'entraînement") {
                     // Start the timer when the button is tapped
                     Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                         // Decrement the timer value by 1 every second

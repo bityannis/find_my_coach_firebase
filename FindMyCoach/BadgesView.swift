@@ -2,88 +2,82 @@
 //  BadgesView.swift
 //  FindMyCoach
 //
-//  Created by Yannis Kessas on 24/03/2023.
+//  Created by Tom Rizo on 28/03/2023.
 //
 
 import SwiftUI
 
 struct BadgesView: View {
     var body: some View {
-        VStack(alignment: .leading){
+        ZStack {
+            Color(red: 30 / 255, green: 36 / 255, blue: 50 / 255)
             
-            Text("Badges")
-                .font(.largeTitle)
-                .offset(x: 1, y: -60)
-            
-            Text("Badges à débloquer")
-                .font(.title2)
-                .offset(x: 20, y: -0)
-            ZStack{
-            ExtractedView()
-                .foregroundColor(.black)
+            VStack(alignment: .leading){
+                Text("Badges")
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+                    .offset(x: 1, y: -30)
                 
-
-              
-                   
-            }
-            ZStack{
+                Text("Badges à débloquer")
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .offset(x: 20, y: -0)
+                
+                
                 ExtractedView()
                     .foregroundColor(.black)
-            
-                   
-            }
-            ZStack{
+                ExtractedView()
+                    .foregroundColor(.black)
                 ExtractedView()
                     .foregroundColor(.black)
                 
-                    
-            }
-            VStack {
+                
                 Text("Badges débloqués")
                     .font(.title2)
+                    .foregroundColor(.white)
                     .offset(x: 20, y:-0)
-                }
-            HStack{
-                ZStack{
-                    Circle()
-                        .frame(width: 90, height: 90)
-                        .padding()
-                    
-                    Image(systemName: "tennisball.fill")
+                
+                HStack{
+                    ZStack{
+                        Circle()
+                            .frame(width: 90, height: 90)
+                            .padding()
+                        
+                        Menu("\(Image(systemName: "tennisball.fill"))"){
+                            Button("Vous avez débloqué le badge tenis, Bien joué !", action: click)
+                        }
                         .foregroundColor(.green)
                         .font(.title)
-
-                }
-                HStack{
-                    ZStack{
-                        Circle()
-                            .frame(width: 90, height: 90)
-                            .padding()
-                        
-                        Image(systemName: "basketball.fill")
-                            .foregroundColor(.green)
-                            .font(.title)
-
                     }
-                }
-                HStack{
+                    
                     ZStack{
                         Circle()
                             .frame(width: 90, height: 90)
                             .padding()
                         
-                        Image(systemName: "football.fill")
-                            .foregroundColor(.green)
-                            .font(.title)
+                        Menu("\(Image(systemName: "basketball.fill"))"){
+                            Button("Vous avez débloqué le badge basket, Bien joué !", action: click)
+                        }
+                        .foregroundColor(.green)
+                        .font(.title)
+                    }
+                    
+                    ZStack{
+                        Circle()
+                            .frame(width: 90, height: 90)
+                            .padding()
+                        
+                        Menu("\(Image(systemName: "football.fill"))"){
+                            Button("Vous avez débloqué le badge football, Bien joué !", action: click)
+                        }
+                        .foregroundColor(.green)
+                        .font(.title)
                     }
                 }
             }
-
-      }
-   }
+        }.ignoresSafeArea()
+    }
 }
-
-      
 
 struct BadgesView_Previews: PreviewProvider {
     static var previews: some View {
@@ -91,7 +85,7 @@ struct BadgesView_Previews: PreviewProvider {
     }
 }
 
-
+func click() { }
 
 struct ExtractedView: View {
     var body: some View {
@@ -101,12 +95,11 @@ struct ExtractedView: View {
                     .frame(width: 90, height: 90)
                     .padding()
                 
-                Image(systemName: "questionmark")
-                    .foregroundColor(.gray)
-                    .font(.title)
-                    
-                
-
+                Menu("\(Image(systemName: "questionmark"))"){
+                    Button("Vous n'avez pas débloqué ce badge", action: click)
+                }
+                .foregroundColor(.gray)
+                .font(.largeTitle)
             }
             HStack{
                 ZStack{
@@ -114,10 +107,12 @@ struct ExtractedView: View {
                         .frame(width: 90, height: 90)
                         .padding()
                     
-                    Image(systemName: "questionmark")
-                        .foregroundColor(.gray)
-                        .font(.title)
-
+                    Menu("\(Image(systemName: "questionmark"))"){
+                        Button("Vous n'avez pas débloqué ce badge", action: click)
+                    }
+                    .foregroundColor(.gray)
+                    .font(.largeTitle)
+                    
                 }
             }
             HStack{
@@ -126,14 +121,14 @@ struct ExtractedView: View {
                         .frame(width: 90, height: 90)
                         .padding()
                     
-                    Image(systemName: "questionmark")
+                    Menu("\(Image(systemName: "questionmark"))"){
+                        Button("Vous n'avez pas débloqué ce badge", action: click)
+                    }
                     .foregroundColor(.gray)
-                    .font(.title)
-
+                    .font(.largeTitle)
+                    
                 }
             }
         }
-
-        
     }
 }

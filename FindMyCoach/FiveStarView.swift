@@ -9,7 +9,7 @@ public struct FiveStarView: View {
 
     public init(
         rating: Decimal,
-        color: Color = .orange,
+        color: Color = .yellow,
         backgroundColor: Color = .gray
     ) {
         self.rating = rating
@@ -129,7 +129,9 @@ struct FiveStarView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             FiveStarView(rating: 3.8)
-                .frame(minWidth: 1, idealWidth: 100, maxWidth: 150, minHeight: 1, idealHeight: 30, maxHeight: 50, alignment: .center)        }
+                .frame(minWidth: 1, idealWidth: 100, maxWidth: 150, minHeight: 1, idealHeight: 30, maxHeight: 50, alignment: .center)
+            
+        }
     }
 }
 

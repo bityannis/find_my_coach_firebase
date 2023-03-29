@@ -19,7 +19,7 @@ struct LocationView: View {
                     NavigationLink {
                         ListOfCoaches()
                     } label: {
-                        Text("See Coaches around you").frame(width: 300.0, height: 50.0).background(.orange).foregroundColor(.white).cornerRadius(10)
+                        Text("Voir les coachs aux alentours").frame(width: 300.0, height: 50.0).background(.orange).foregroundColor(.black).cornerRadius(10)
                     }
                 .padding()
                 }

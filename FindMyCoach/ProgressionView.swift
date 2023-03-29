@@ -18,34 +18,41 @@ var goals = [
 struct ProgressionView: View {
     var body: some View {
         NavigationStack {
-            VStack {
-                HStack {
-                    Text("Tableau des objectifs")
-                        .font(.title)
-                    .padding()
-                    NavigationLink {
-                        ObjectivesView()
-                    } label: {
-                        Image(systemName: "plus.app.fill").resizable().frame(width: 30, height: 30)
-                    }
-                }
-
-                List(goals) { goal in
+            ZStack {
+                Color(red: 30 / 255, green: 36 / 255, blue: 50 / 255)
+                VStack {
                     HStack {
-                        Text(goal.title)
-                        Spacer()
-                        Text("\(Int(goal.value)) %")
-                            .foregroundColor(.gray)
+                        Text("Tableau des objectifs")
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .padding()
+                        NavigationLink {
+                            ObjectivesView()
+                        } label: {
+                            Image(systemName: "plus.app.fill").resizable().frame(width: 30, height: 30)
+                        }
                     }
+                    
+                    List(goals) { goal in
+                        HStack {
+                            Text(goal.title)
+                            Spacer()
+                            Text("\(Int(goal.value)) %")
+                                .foregroundColor(.gray)
+                        }
+                    }
+                    .listStyle(PlainListStyle())
+                    .padding()
+                    
+                    Text("Graphique des objectifs")
+                        .font(.title)
+                        .padding()
+                        .foregroundColor(.white)
+                    
+                    BarChartView(data: goals)
+                        .padding()
+                        .foregroundColor(.white)
                 }
-                .padding()
-
-                Text("Graphique des objectifs")
-                    .font(.title)
-                    .padding()
-
-                BarChartView(data: goals)
-                    .padding()
             }
         }
     }

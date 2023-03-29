@@ -10,28 +10,29 @@ import SwiftUI
 struct ObjectivesView: View {
     @State private var multiSelection = Set<UUID>()
     var body: some View {
-       VStack (alignment: .leading){
-            Text("Mes Objectifs")
-                .font(.largeTitle)
-                .padding()
-            NavigationStack {
-                List(entrainements, selection: $multiSelection){ entrainement in
-                    HStack {
-
-                        Text(entrainement.defis)
-
-
+        ZStack {
+//            Color(red: 30 / 255, green: 36 / 255, blue: 50 / 255)
+//
+            VStack (alignment: .leading){
+                Text("Mes Objectifs")
+                    .font(.largeTitle)
+                    .padding()
+                NavigationStack {
+                    List(entrainements, selection: $multiSelection){ entrainement in
+                        HStack {
+                            Text(entrainement.defis)
+                        }
+                        .navigationTitle("")
                     }
-                    .navigationTitle("")
+                    .listStyle(PlainListStyle())
+                    .toolbar { EditButton() }
+                    Text("\(multiSelection.count) selections")
 
                 }
-                .toolbar { EditButton() }
-                Text("\(multiSelection.count) selections")
-
             }
-          }
         }
     }
+}
 
 
 struct ObjectivesView_Previews: PreviewProvider {

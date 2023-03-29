@@ -6,15 +6,35 @@
 //
 
 import SwiftUI
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
+
+//@main
+//struct FindMyCoachApp: App {
+//    var healthVM = HealthKitViewModel()
+//
+//    var body: some Scene {
+//        WindowGroup {
+////            HealthView().environmentObject(healthVM)
+//            Login()
+//        }
+//    }
+//}
 
 @main
 struct FindMyCoachApp: App {
-    var healthVM = HealthKitViewModel()
-    
+    //    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    init() {
+        FirebaseApp.configure()
+//        let db = Firestore.firestore()
+//        debugPrint(db)
+    }
     var body: some Scene {
         WindowGroup {
-//            HealthView().environmentObject(healthVM)
-            Login()
+            NavigationStack {
+                WelcomeView()
+            }
         }
     }
 }

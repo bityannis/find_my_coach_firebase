@@ -12,7 +12,7 @@ struct Login: View {
     var realPassword = "123"
     @State private var username = ""
     @State private var password = ""
-    @State var sentence = ["Bonjour Gérard" ,"Invalid credential", "Username is empty"]
+    @State var sentence = ["Bonjour Gérard" ,"Mot de passe ou nom d'utilisateur invalide", "Nom d'utilisateur vide"]
     @State var i: Int = 0
     @State var connectedViewIsActive = false
     
@@ -38,18 +38,18 @@ struct Login: View {
                         .fontWeight(.semibold).foregroundColor(Color.black)
                     
                     HStack {
-                        Text("Username")
-                        TextField("Type here", text: $username)
+                        Text("Nom d'utilisateur")
+                        TextField("Tapez ici", text: $username)
                     }
                     HStack {
-                        Text("Password")
-                        SecureField("Type here", text: $password)
+                        Text("Mot de passe      ")
+                        SecureField("Tapez ici", text: $password)
                     }
                     
                     Button(action: {
                         validateCredentials()
                     }) {
-                        Text("Login").frame(width: 150, height: 50).background(.black).cornerRadius(10).foregroundColor(.white).fontWeight(.bold)
+                        Text("Se connecter").frame(width: 150, height: 50).background(.black).cornerRadius(10).foregroundColor(.white).fontWeight(.bold)
                     }
                     
                     NavigationLink(
@@ -60,6 +60,7 @@ struct Login: View {
                     }
                     Spacer()
                 }
+                .padding()
             }.ignoresSafeArea()
         }
     }

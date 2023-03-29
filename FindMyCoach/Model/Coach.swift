@@ -26,10 +26,14 @@ struct Coach: Identifiable {
     func average()-> Double{
         let allRatings = userRatings.values
         var averageRating: Double = 0
-        for userRating in allRatings {
-            averageRating += userRating
+        if userRatings.count > 0 {
+            for userRating in allRatings {
+                averageRating += userRating
+            }
+            averageRating = averageRating/(Double(allRatings.count))
+        } else {
+            averageRating = 0.0
         }
-        averageRating = averageRating/(Double(allRatings.count))
         return averageRating
     }
     
